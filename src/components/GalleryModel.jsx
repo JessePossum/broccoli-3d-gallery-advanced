@@ -1,18 +1,7 @@
 import { useGLTF } from '@react-three/drei'
 import { useMemo } from 'react'
 
-export default function GalleryModel({ fallback = null }) {
-  // Put your GLB at public/models/gallery.glb
-  // If it fails, the error boundary would normally catch it.
-  // During early prototyping, use the PlaceholderRoom if your model is not ready.
-  try {
-    return <LoadedModel />
-  } catch {
-    return fallback
-  }
-}
-
-function LoadedModel() {
+export default function GalleryModel() {
   const gltf = useGLTF('/models/gallery.glb')
 
   const scene = useMemo(() => {
