@@ -20,7 +20,7 @@ export default function App() {
         onCameraDataChange={setCameraData}
       />
 
-      <Interface />
+      <Interface selectedArtwork={selectedArtwork} />
 
       <CameraDebugOverlay cameraData={cameraData} />
 
